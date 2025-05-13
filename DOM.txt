@@ -69,4 +69,4 @@ React to user actions like clicks, typing, etc.
 
 Function	                                        Description	                        Example
 element.addEventListener(event, callback)	        Listen for an event	                button.addEventListener("click", sayHi)
-element.removeEventListener(event, callback)	    Stop listening	                    ~~button.removeEventListener("click", sayHi)
+element.removeEventListener(event, callback)	    Stop listening	                    button.removeEventListener("click", sayHi)
