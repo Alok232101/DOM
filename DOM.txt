@@ -1,0 +1,72 @@
+DOM Manipulation:
+    One of the most fundamental use-case of JS is to be able to manipulate and control DOM(document object model).
+
+What is the meaning of the word DOM Manipulation?
+    DOM manipulation refers to the process of using programming (typically JavaScript) to interact with and change the Document Object Model (DOM) — which is the structured representation of a web page in the browser.
+        Breakdown:
+            DOM (Document Object Model): A tree-like structure that browsers create from your HTML document. Every HTML element (like <div>, <p>, <img>, etc.) becomes a node in this tree.
+            Manipulation: Changing, adding, or removing parts of this structure dynamically using code.
+
+        Examples of DOM Manipulation:
+            1. Changing content:
+                document.getElementById("title").innerText = "New Title";
+
+            2. Changing styles:
+                document.querySelector(".box").style.backgroundColor = "blue";
+
+            3. Creating new elements:
+                const newDiv = document.createElement("div");
+                newDiv.innerText = "Hello!";
+                document.body.appendChild(newDiv);
+
+            4. Removing elements:
+                const element = document.getElementById("old");
+                element.remove();
+
+Why It’s Important:
+    DOM manipulation is what allows web pages to be dynamic and interactive — such as responding to button clicks, showing/hiding content, loading new data, or creating animations.
+
+how to achive DOM manipulation:
+    So our browser provide us a lot of function and object using which we can control the whole DOM.Important thing to note is that these functions are not native to JS, instead they are provided by the browser (which is runtime environment)
+
+
+🔍 Element Selection Functions
+These let you find elements in the DOM.
+
+    Function	                            Description	                                            Example
+    document.getElementById(id)	            Selects a single element by ID	                        document.getElementById("main")
+    document.getElementsByClassName(class)	Selects elements by class name (HTMLCollection)	        document.getElementsByClassName("item")
+    document.getElementsByTagName(tag)	    Selects elements by tag name (HTMLCollection)	        document.getElementsByTagName("p")
+    document.querySelector(selector)	    Selects the first matching element (CSS-style selector)	document.querySelector(".nav")
+    document.querySelectorAll(selector)	    Selects all matching elements (NodeList)	            document.querySelectorAll("div.box")
+
+
+🛠️ DOM Manipulation Functions
+These are used to change or update the DOM.
+
+    Function	                                   Description	                    Example
+    element.innerText / element.textContent	       Get or set text	                title.innerText = "New Title"
+    element.innerHTML	                           Get or set HTML content	        box.innerHTML = "<b>Bold!</b>"
+    element.setAttribute(name, value)	           Add or change an attribute	    img.setAttribute("src", "image.jpg")
+    element.getAttribute(name)	                   Get an attribute value	        link.getAttribute("href")
+    element.classList.add("class")	               Add a class	                    box.classList.add("highlight")
+    element.classList.remove("class")	           Remove a class	                box.classList.remove("hidden")
+    element.style.property = value	               Change CSS style	                div.style.backgroundColor = "blue"
+
+
+➕ Create and Modify Elements
+You can dynamically build new elements and add them to the DOM.
+
+Function	                        Description	                             Example
+document.createElement(tag)	        Create a new HTML element	             let p = document.createElement("p")
+element.appendChild(child)	        Add a child element	                     list.appendChild(newItem)
+element.remove()	                Remove an element	                     div.remove()
+parent.replaceChild(new, old)	    Replace one child with another	         container.replaceChild(newDiv, oldDiv)
+
+
+🔁 Event Handling
+React to user actions like clicks, typing, etc.
+
+Function	                                        Description	                        Example
+element.addEventListener(event, callback)	        Listen for an event	                button.addEventListener("click", sayHi)
+element.removeEventListener(event, callback)	    Stop listening	                    ~~button.removeEventListener("click", sayHi)
