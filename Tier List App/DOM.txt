@@ -70,3 +70,22 @@ React to user actions like clicks, typing, etc.
 Function	                                        Description	                        Example
 element.addEventListener(event, callback)	        Listen for an event	                button.addEventListener("click", sayHi)
 element.removeEventListener(event, callback)	    Stop listening	                    button.removeEventListener("click", sayHi)
+
+
+Document:
+
+A very important glabal object - document
+
+Browser provides us a very important object whis is glabally present every where in the browser's Js, called document.
+This Object helps us to access the DOM. This object has access to the HTML, and contains a lot of method/functions and properties using which 
+we can manipulate the DOM.
+
+Event driven programming:
+
+To understand event driven programming, we need to understand concept of events first.
+Event are some actions or interaction done by an ecternal agent (may be the user) on our application. For example: clicking a button is an event,
+scrolling is an event, moving the mouseis an event, pressing a button on keyboard is an event and so on.
+So when we click a button an event is triggered.
+
+So react on these actions, we can write logics which will only execute when these actions are triggered. And the programming paradigm where the
+logic / code / response to these events is called as event driven programming.
